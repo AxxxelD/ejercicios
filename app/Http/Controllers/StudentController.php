@@ -39,7 +39,8 @@ class StudentController extends Controller
         return response()->json(['mensaje' => 'Actualizado', 'data' => $student]);
     }
 
-    // Eliminar t $student)
+    // Eliminar estudiante
+    public function destroy(Student $student)
     {
         $student->delete();
         return response()->json(['mensaje' => 'Eliminado']);
